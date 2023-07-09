@@ -64,13 +64,13 @@ const registerSchema = yup.object().shape({
       }
       formData.append("picturePath", values.picture.name);
   
-      const savedUserResponse = await fetch(
-        `${API}/auth/register`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+     const savedUserResponse = await fetch(
+      `${API}/auth/register`,
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    );
       const savedUser = await savedUserResponse.json();
       onSubmitProps.resetForm();
   
