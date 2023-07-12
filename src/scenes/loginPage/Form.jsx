@@ -266,6 +266,14 @@ const registerSchema = yup.object().shape({
                   ? "Don't have an account? Sign Up here."
                   : "Already have an account? Login here."}
               </Typography>
+              {isLogin 
+              ? <div>
+                  <h4>For Checking</h4>
+                  <p>email:person@gmail.com</p>
+                  <p>password: password</p>
+                </div>
+                : null
+            }
             </Box>
           </form>
         )}
